@@ -64,17 +64,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendBill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SendBill.Designer.cs">
-      <DependentUpon>SendBill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\ezService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,9 +77,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SendBill.resx">
-      <DependentUpon>SendBill.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -101,16 +87,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\ezService\TCI_Ser.wsdl" />
-    <None Include="Service References\ezService\TCI_Ser.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ezService\TCI_Ser1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ezService\TCI_Ser2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -122,30 +98,6 @@
       <Project>{d14696dd-14b4-4f62-8aa1-34911de7bb98}</Project>
       <Name>BillToolsprj</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ezService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ezService\TCI_Ser.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ezService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ezService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ezService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
