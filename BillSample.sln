@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "BarCodeSub\Sample.csproj", "{B202DEF5-4335-4131-B272-4E1194D56499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillToolsprj", "ShenasePrj\BillToolsprj.csproj", "{D14696DD-14B4-4F62-8AA1-34911DE7BB98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B202DEF5-4335-4131-B272-4E1194D56499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B202DEF5-4335-4131-B272-4E1194D56499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B202DEF5-4335-4131-B272-4E1194D56499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B202DEF5-4335-4131-B272-4E1194D56499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14696DD-14B4-4F62-8AA1-34911DE7BB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14696DD-14B4-4F62-8AA1-34911DE7BB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14696DD-14B4-4F62-8AA1-34911DE7BB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14696DD-14B4-4F62-8AA1-34911DE7BB98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
