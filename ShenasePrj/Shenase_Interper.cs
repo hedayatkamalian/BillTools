@@ -83,7 +83,7 @@ namespace BillTools
         {
             bool RetValue = false;
 
-            Shenase ToVer = new Shenase(ServiceTypeCode, CompanyCode, YearCode, Duration);
+            Shenase ToVer = new Shenase(ServiceTypeCode, CompanyCode, YearCode, Duration , false);
             string[] ToVerShenase  = ToVer.Generate_BillID_PayID(CustomerID, ValueToPay, true);
 
             if (BillID.TrimStart('0') == ToVerShenase[0].TrimStart('0') && PayID.TrimStart('0') == ToVerShenase[1].TrimStart('0'))

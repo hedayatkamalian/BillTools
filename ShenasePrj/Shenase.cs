@@ -20,29 +20,34 @@ namespace BillTools
         /// <param name="CompanyCode"> کد سه رقمی شرکت تابعه</param>
         /// <param name="YearCode"> رقم یکان سال</param>
         /// <param name="DurationCode"> دوره صدور صورتحساب</param>
-        public Shenase(int ServiceTypeCode , int CompanyCode , int YearCode , int DurationCode )
+        public Shenase(int ServiceTypeCode , int CompanyCode , int YearCode , int DurationCode , bool Validate )
         {
             #region Validation
 
-            if ( ServiceTypeCode<1 || ServiceTypeCode >9)
+            if (Validate)
             {
-                throw new Exception("ServiceTypeCode Type must between 1 to 9");
+                if (ServiceTypeCode < 1 || ServiceTypeCode > 9)
+                {
+                    throw new Exception("ServiceTypeCode Type must between 1 to 9");
+                }
+
+                if (CompanyCode < 100 || CompanyCode > 999)
+                {
+                    throw new Exception("CompanyCode Type must between 100 to 999");
+                }
+
+                if (YearCode < 0 || YearCode > 9)
+                {
+                    throw new Exception("YearCode Type must between 0 to 9");
+                }
+
+                if (DurationCode < 1 || DurationCode > 12)
+                {
+                    throw new Exception("DurationCode Type must between 1 to 12");
+                }
             }
 
-            if (CompanyCode < 100 || CompanyCode > 999)
-            {
-                throw new Exception("CompanyCode Type must between 100 to 999");
-            }
-
-            if (YearCode < 0 || YearCode > 9)
-            {
-                throw new Exception("YearCode Type must between 0 to 9");
-            }
-
-            if (DurationCode < 1 || DurationCode > 12)
-            {
-                throw new Exception("DurationCode Type must between 1 to 12");
-            }
+          
 
             #endregion
 
@@ -77,7 +82,15 @@ namespace BillTools
 
             string[] RetValue = new string[2];
 
-            string Bill = SubID.ToString()  + _CompanyCode.ToString() + _ServiceType.ToString();
+
+            string CompanyCodeString = _CompanyCode.ToString();
+
+            while (CompanyCodeString.Length < 3)
+            {
+                CompanyCodeString = "0" + CompanyCodeString;
+            }
+
+            string Bill = SubID.ToString()  + CompanyCodeString + _ServiceType.ToString();
             Bill = Bill + ControlDigit(Bill);
 
             string Dur = _DurationCode.ToString();

@@ -31,7 +31,7 @@ namespace BarCodeSub
             {
 
             
-            Shenase Sh = new Shenase(int.Parse(txbServiceTypeCode.Text), int.Parse(txbCompanyCode.Text), int.Parse(txbYear.Text), int.Parse(txbDuration.Text));
+            Shenase Sh = new Shenase(int.Parse(txbServiceTypeCode.Text), int.Parse(txbCompanyCode.Text), int.Parse(txbYear.Text), int.Parse(txbDuration.Text),false);
             
 
             string[] Temp = Sh.Generate_BillID_PayID(int.Parse(txbSubID.Text), double.Parse(txbToPay.Text) , chkFillzero.Checked);
