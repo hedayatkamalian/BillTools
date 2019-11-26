@@ -73,9 +73,9 @@ namespace BillTools
                 throw new Exception("SubID Type must between 1 to 99999999");
             }
 
-            if (ValueToPay < 1 || ValueToPay > 99999999)
+            if (ValueToPay < 1 || ValueToPay > 99999999999)
             {
-                throw new Exception("ValueToPay Type must between 1 to 99999999");
+                throw new Exception("ValueToPay Type must between 1 to 99999999999");
             }
 
             #endregion
